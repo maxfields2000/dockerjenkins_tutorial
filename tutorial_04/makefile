@@ -16,5 +16,5 @@ clean:	stop
 clean-data:
 	@docker rm jenkins-data
 clean-images:
-	@docker rmi $(docker images -q -f dangling=true)
+	@docker rmi $(docker images -q --filter="dangling=true")
 
