@@ -7,4 +7,4 @@ start:
 stop:
 	@docker stop jenkins-master
 clean:	stop
-	@docker rm jenkins-master
+	@docker rm -v jenkins-master

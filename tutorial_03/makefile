@@ -8,6 +8,6 @@ run:
 stop:
 	@docker stop jenkins-master
 clean:	stop
-	@docker rm jenkins-master
+	@docker rm -v jenkins-master
 clean-data:
-	@docker rm jenkins-data
+	@docker rm -v jenkins-data

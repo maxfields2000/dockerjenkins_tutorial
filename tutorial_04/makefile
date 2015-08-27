@@ -11,10 +11,10 @@ stop:
 	@docker stop jenkins-master
 	@docker stop jenkins-nginx
 clean:	stop
-	@docker rm jenkins-master
-	@docker rm jenkins-nginx
+	@docker rm -v jenkins-master
+	@docker rm -v jenkins-nginx
 clean-data:
-	@docker rm jenkins-data
+	@docker rm -v jenkins-data
 clean-images:
 	@docker rmi $(docker images -q --filter="dangling=true")
 
