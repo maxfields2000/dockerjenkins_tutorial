@@ -1,6 +1,6 @@
 # Jenkins and Docker Tutorial Series
 
-This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games (link here).  Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
+This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games (http://live-rg-engineering.pantheon.io/news/putting-jenkins-docker-container).  Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
 
 # Instructions
 
