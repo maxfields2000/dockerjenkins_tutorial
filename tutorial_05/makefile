@@ -6,7 +6,7 @@ stop:
 	@docker-compose stop
 clean:	stop
 	@docker-compose rm jenkinsmaster jenkinsnginx
-clean-data:
+clean-data: clean
 	@docker-compose rm jenkinsdata
 clean-images:
 	@docker rmi $(docker images -q --filter="dangling=true")
