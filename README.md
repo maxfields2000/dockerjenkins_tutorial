@@ -4,11 +4,11 @@ This repository is provided as a set of functional working examples that follows
 
 # Blogs In Order of Appearnce
 
-1. http://engineering.riotgames.com/news/thinking-inside-container
-2. http://engineering.riotgames.com/news/putting-jenkins-docker-container
-3. http://engineering.riotgames.com/news/docker-jenkins-data-persists
-4. http://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose
-5. http://engineering.riotgames.com/news/taking-control-your-docker-image
+1. [Thinking Inside the Container](http://engineering.riotgames.com/news/thinking-inside-container)
+2. [Putting Jenkins into a Docker Container](http://engineering.riotgames.com/news/putting-jenkins-docker-container)
+3. [Docker Jenkins and Data that Persists](http://engineering.riotgames.com/news/docker-jenkins-data-persists)
+4. [Jenkins, Docker, Proxies and Compose](http://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose)
+5. [Taking Control of your Docker Image](http://engineering.riotgames.com/news/taking-control-your-docker-image)
 
 # Instructions For Using this Repository
 
