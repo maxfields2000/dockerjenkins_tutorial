@@ -1,8 +1,16 @@
 # Jenkins and Docker Tutorial Series
 
-This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games (http://live-rg-engineering.pantheon.io/news/putting-jenkins-docker-container).  Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
+This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games, Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
 
-# Instructions
+# Blogs In Order of Appearnce
+
+1. http://engineering.riotgames.com/news/thinking-inside-container
+2. http://engineering.riotgames.com/news/putting-jenkins-docker-container
+3. http://engineering.riotgames.com/news/docker-jenkins-data-persists
+4. http://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose
+5. http://engineering.riotgames.com/news/taking-control-your-docker-image
+
+# Instructions For Using this Repository
 
 Ideally users should follow the blog series for specific directions.  That said here's some basic setup instructions you will need before these become viable.
 
