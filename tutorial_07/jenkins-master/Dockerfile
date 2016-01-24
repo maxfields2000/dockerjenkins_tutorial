@@ -63,7 +63,7 @@ RUN chown -R jenkins:jenkins /var/cache/jenkins
 EXPOSE 8080
 EXPOSE 50000
 
-# Copy in local config filesfiles
+# Copy in local config files
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY jenkins.sh /usr/local/bin/jenkins.sh
 COPY plugins.sh /usr/local/bin/plugins.sh
@@ -71,8 +71,8 @@ RUN chmod +x /usr/local/bin/plugins.sh
 RUN chmod +x /usr/local/bin/jenkins.sh
 
 # Install default plugins
-COPY plugins.txt /plugins.txt
-RUN /usr/local/bin/plugins.sh /plugins.txt
+COPY plugins.txt /tmp/plugins.txt
+RUN /usr/local/bin/plugins.sh /tmp/plugins.txt
 
 # Copy in the Docker certs, we'll use /usr/local/etc for them
 COPY certs/ca-key.pem /usr/local/etc/jenkins/certs/ca-key.pem
