@@ -12,7 +12,7 @@ RUN yum makecache \
     zip \
     openssh-client \
     unzip \
-    java-1.8.0-openjdk \   
+    java-1.8.0-openjdk
     && yum clean all
     
 #RUN /var/lib/dpkg/info/ca-certificates-java.postinst configure
