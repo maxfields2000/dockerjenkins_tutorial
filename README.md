@@ -2,7 +2,7 @@
 
 This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games, Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
 
-# Blogs In Order of Appearnce
+# Blogs In Order of Appearance
 
 1. [Thinking Inside the Container](http://engineering.riotgames.com/news/thinking-inside-container)
 2. [Putting Jenkins into a Docker Container](http://engineering.riotgames.com/news/putting-jenkins-docker-container)
