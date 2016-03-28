@@ -9,6 +9,10 @@ This repository is provided as a set of functional working examples that follows
 3. [Docker Jenkins and Data that Persists](http://engineering.riotgames.com/news/docker-jenkins-data-persists)
 4. [Jenkins, Docker, Proxies and Compose](http://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose)
 5. [Taking Control of your Docker Image](http://engineering.riotgames.com/news/taking-control-your-docker-image)
+<<<<<<< HEAD
+6. [Ephemeral Docker Build Slaves](http://engineering.riotgames.com/news/ephemeral-docker-build-slaves)
+=======
+>>>>>>> master
 
 # Instructions For Using this Repository
 
@@ -31,5 +35,4 @@ Ideally users should follow the blog series for specific directions.  That said 
 3. Follow all setup instructions.
 4. Verify your installation is working by opening a docker terminal window (in windows this step is done by clicking the docker quickstart desktop icon) by running the following steps:
 5. Type: docker images (verify it gives you an empty list back with no errors).
-
 
