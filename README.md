@@ -9,10 +9,7 @@ This repository is provided as a set of functional working examples that follows
 3. [Docker Jenkins and Data that Persists](http://engineering.riotgames.com/news/docker-jenkins-data-persists)
 4. [Jenkins, Docker, Proxies and Compose](http://engineering.riotgames.com/news/jenkins-docker-proxies-and-compose)
 5. [Taking Control of your Docker Image](http://engineering.riotgames.com/news/taking-control-your-docker-image)
-<<<<<<< HEAD
 6. [Ephemeral Docker Build Slaves](http://engineering.riotgames.com/news/ephemeral-docker-build-slaves)
-=======
->>>>>>> master
 
 # Instructions For Using this Repository
 
