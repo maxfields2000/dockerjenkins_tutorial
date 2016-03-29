@@ -17,7 +17,7 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
 6. make run
 7. Point your browser to http://yourdockermachineip
 8. In jenkins, configure a ssh-key pair using an ssh private key for the user "jenkins". As the private key, use the file in jenkins-slave/files/dummy_private_rsa_key
-9. In jenkins, configure a Docker Certifacts Directory credential using /usr/local/etc/jenkins/certs as the source directory
+9. In jenkins, configure a Docker Certificates Directory credential using /usr/local/etc/jenkins/certs as the source directory
 10. In jenkins configuration, add a new Docker cloud provider
   1. Set host to https://yourdockermachineip:2376
   2. Select the docker certificates directory you made
