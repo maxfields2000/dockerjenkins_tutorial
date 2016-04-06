@@ -18,7 +18,7 @@ function myip () {
   return 1
 }
 
-if is_darwin; then
+function darwin_init () {
   DOCKER_CERTS_PATH="$HOME/.docker/machine/certs"
   if [ ! -e "$DOCKER_CERTS_PATH" ]; then
     echo "Error: Looks like you're on OSX, but don't have Dockertoolbox"
@@ -28,12 +28,19 @@ if is_darwin; then
   fi
 
   eval "$(docker-machine env $DOCKERMACHINE_NAME)"
+}
+
+if is_darwin; then
+  darwin_init
 fi
+
+# TODO: linu_init, or: ubuntu_init, centos_init, ...
 
 if [ ! -d "jekins-master/cert" ]; then
   echo "Copying $DOCKER_CERTS_PATH to jenkins-master/cert"
-  cp -R "$DOCKER_CERTS_PATH" jenkins-master/cert
+  cp -R "$DOCKER_CERTS_PATH" jenkins-master/certs
 fi
+
 
 make build
 make run

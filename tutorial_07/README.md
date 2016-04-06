@@ -12,7 +12,7 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
 1. Make sure you have all the pre-reqs installed (i.e. Docker-toolbox)
 2. Clone this repository to your local drive
 3. Find the docker-machine folder container your 4 client pem keys (ca-key.pem, ca.pem, key.pem, cert.pem). Mine for example, is in ~/.docker/machine/certs.
-4. cp -R yourdockermachinecertsfolder jenkins-master/cert
+4. cp -R yourdockermachinecertsfolder jenkins-master/certs
 5. make build
 6. make run
 7. Point your browser to http://yourdockermachineip
