@@ -16,7 +16,7 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
 5. make build
 6. make run
 7. Point your browser to http://yourdockermachineip
-8. In jenkins, configure a ssh-key pair using an ssh private key for the user "jenkins". As the private key, use the file in jenkins-slave/files/dummy_private_rsa_key
+8. In jenkins, configure a ssh-key pair using an ssh private key for the user "jenkins". As the private key, use the file in jenkins-slave/files/dummy\_private\_rsa\_key
 9. In jenkins, configure a Docker Certificates Directory credential using /usr/local/etc/jenkins/certs as the source directory
 10. In jenkins configuration, add a new Docker cloud provider
   1. Set host to https://yourdockermachineip:2376
@@ -25,7 +25,7 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
   4. set connection timeout to 15
   5. Click on "Test COnnection" and make sure you get a valid response
 11. In jenkins config on your new Docker cloud add a Docker template
-  1. Set the image name to: jenkins_slave
+  1. Set the image name to: jenkins\_slave
   2. Create a label "testslave"
   3. Make sure credentials are your new ssh key pair you made above
   4. Click "Save"
