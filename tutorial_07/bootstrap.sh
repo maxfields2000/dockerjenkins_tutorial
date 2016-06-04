@@ -36,8 +36,8 @@ fi
 
 # TODO: linu_init, or: ubuntu_init, centos_init, ...
 
-if [ ! -d "jekins-master/cert" ]; then
-  echo "Copying $DOCKER_CERTS_PATH to jenkins-master/cert"
+if [ ! -d "jenkins-master/certs" ]; then
+  echo "Copying $DOCKER_CERTS_PATH to jenkins-master/certs"
   cp -R "$DOCKER_CERTS_PATH" jenkins-master/certs
 fi
 
