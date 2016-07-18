@@ -1,4 +1,4 @@
-The tutorial for this makefile can be found here: http://engineering.riotgames.com/news/ephemeral-docker-build-slaves
+The tutorial for this makefile can be found here: http://engineering.riotgames.com/news/building-jenkins-inside-ephemeral-docker-container
 
 # Ephemeral Build Slaves using Jenkins and Docker
 
