@@ -1,3 +1,9 @@
+# ATTENTION: Docker 1.12 Users!
+
+This guide uses the Docker-Plugin for jenkins (0.15 or 0.16). Which appear to have some compatibility problems with Docker 1.12.  I will be posting an update to these tutorials (soon tm!) with moving to "Yet Another Docker Plugin" as a result (once I've ironed out testing/kinks/etc). 
+
+Until then, stick to using Docker 1.10 or 1.11 if you want to follow these guides! Thanks!
+
 # Jenkins and Docker Tutorial Series
 
 This repository is provided as a set of functional working examples that follows along with a blog series released by Maxfield Stewart at Riot Games, Each folder contains a self contained set of files that are the end result of each tutorial and are provided as is.
