@@ -35,8 +35,8 @@ RUN curl -fsSL https://github.com/krallin/tini/releases/download/v${TINI_VERSION
 # SET Jenkins Environment Variables
 ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_SLAVE_AGENT_PORT 50000
-ENV JENKINS_VERSION 2.7.4
-ENV JENKINS_SHA 07a2e3e4ace728fdbcc823f46068d2f8cc3cb97b
+ENV JENKINS_VERSION 2.22
+ENV JENKINS_SHA 5b89b6967e7af8119c52c7e86223b47665417a22 
 ENV JENKINS_UC https://updates.jenkins-ci.org
 ENV COPY_REFERENCE_FILE_LOG $JENKINS_HOME/copy_reference_file.log
 
