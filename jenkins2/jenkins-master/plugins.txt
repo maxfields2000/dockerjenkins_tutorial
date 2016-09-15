@@ -1,0 +1,10 @@
+jclouds-jenkins
+token-macro
+durable-task
+credentials
+icon-shim
+ssh-slaves
+ssh-credentials
+authentication-tokens
+docker-commons
+yet-another-docker-plugin
