@@ -27,14 +27,7 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
 4. Inside the root folder of your local clone execute the following two commands:
   1. make build
   2. make run
-  3. docker exec jenkins_master_1 cat /var/jenkins_home/secrets/initialAdminPassword
-  4. Copy that value, you'll need it to unlock your Jenkins 2 install
 5. Point your browser to http://yourdockermachineip (you can get this by running "docker-machine ip default")
-  1. When it asks for your admin password, past in the value you got above
-  2. Click on "Install suggested plugins" (or if you know what you're doing select the ones you want)
-  3. Skip the admin setup by clicking "continue as admin user"
-  4. Got to "Manage Jenkins->Global Security Settings" and under authentication choose "Anyone can do anything" (this is just a local dev environment)
-  5. Go ahead and log out, you shouldn't need to be logged in as admin anymore
 6. In jenkins add a new credential (credentials->system->global credentials) for your Docker host by choosing: "Docker Host Certificate Authentication"
   1. For Client Key, cut and paste the text from your "key.pem" file
   2. For Client Certification, cut and paste the text from your "cert.pem" file
