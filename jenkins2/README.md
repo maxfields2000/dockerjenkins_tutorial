@@ -8,6 +8,7 @@ There several key changes however that won't match that blog. Namely:
 2. This uses the updated "Yet Another Docker Plugin" not the older "Docker Plugin"
   1. In particular how you configure ssl certs to talk to your local docker toolbox has changed
   2. You no longer need to generate an ssh-key pair, the YADP uses JNLP to connect slaves, not SSH
+3. The default build slave no longer starts and exposes SSH as it's not needed.
 
 # Ephemeral Build Slaves using Jenkins and Docker
 
@@ -26,17 +27,25 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
 4. Inside the root folder of your local clone execute the following two commands:
   1. make build
   2. make run
+  3. docker exec jenkins_master_1 cat /var/jenkins_home/secrets/initialAdminPassword
+  4. Copy that value, you'll need it to unlock your Jenkins 2 install
 5. Point your browser to http://yourdockermachineip (you can get this by running "docker-machine ip default")
-6. In jenkins add a new credential (global) for your Docker host by choosing: "Docker Host Certificate Authentication"
+  1. When it asks for your admin password, past in the value you got above
+  2. Click on "Install suggested plugins" (or if you know what you're doing select the ones you want)
+  3. Skip the admin setup by clicking "continue as admin user"
+  4. Got to "Manage Jenkins->Global Security Settings" and under authentication choose "Anyone can do anything" (this is just a local dev environment)
+  5. Go ahead and log out, you shouldn't need to be logged in as admin anymore
+6. In jenkins add a new credential (credentials->system->global credentials) for your Docker host by choosing: "Docker Host Certificate Authentication"
   1. For Client Key, cut and paste the text from your "key.pem" file
   2. For Client Certification, cut and paste the text from your "cert.pem" file
   3. For Server CA Certification, cut and paste the text from your ca.pem file
 7. In jenkins configuration, add a new Yet Another Docker cloud provider
-  1. Set Docker URL to https://yourdockermachineip:2376
+  1. Set Docker URL to https://yourdockermachineip:2376  (it's probably http://192.168.99.100:2376)
   2. For Host Credentials select the Docker host credential you made you made
   3. Click on "Test COnnection" and make sure you get a valid response
 8. In jenkins config on your new Docker cloud add a Docker template
   1. Under "Docker Container Lifecycle" set the image name to: jenkins\_slave
+  2. Under "Pull Image Settings" set it to "Pull Never" (THIS IS IMPORANT. Your image is local, you don't need to pull it.)
   2. Under "Remove Container Settings" check "remove volume"
   3. Under "Jenkins Slave Config" set "Labels" to "testslave"
   4. Under "Launch Method" make sure JNLP is the selected option
