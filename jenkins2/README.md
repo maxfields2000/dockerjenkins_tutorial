@@ -31,20 +31,27 @@ Ideally you'll follow along with the entire blog series. However if you'd like t
   1. For Client Key, cut and paste the text from your "key.pem" file
   2. For Client Certification, cut and paste the text from your "cert.pem" file
   3. For Server CA Certification, cut and paste the text from your ca.pem file
-7. In jenkins configuration, add a new Docker cloud provider
-  1. Set host to https://yourdockermachineip:2376
-  2. Select the docker certificates directory you made
-  3. Set read timeout to 5
-  4. set connection timeout to 15
-  5. Click on "Test COnnection" and make sure you get a valid response
-11. In jenkins config on your new Docker cloud add a Docker template
-  1. Set the image name to: jenkins\_slave
-  2. Create a label "testslave"
-  3. Make sure credentials are your new ssh key pair you made above
-  4. Click "Save"
-12. Create a new free-style jenkins job
-  1. Restrict the job to the label "testslave"
-  2. Add a build step, like execute shell "echo 'Hello World!'"
+7. In jenkins configuration, add a new Yet Another Docker cloud provider
+  1. Set Docker URL to https://yourdockermachineip:2376
+  2. For Host Credentials select the Docker host credential you made you made
+  3. Click on "Test COnnection" and make sure you get a valid response
+8. In jenkins config on your new Docker cloud add a Docker template
+  1. Under "Docker Container Lifecycle" set the image name to: jenkins\_slave
+  2. Under "Remove Container Settings" check "remove volume"
+  3. Under "Jenkins Slave Config" set "Labels" to "testslave"
+  4. Under "Launch Method" make sure JNLP is the selected option
+  5. Click "Save"
+12. Create a new pipeline jenkins job
+  1. Enter the following for the pipeline script:
+```
+node ('testslave') {
+
+  stage 'Stage 1'
+  sh 'echo "Hello World!"'
+
+}
+```
+
   3. Save job
   4. Run job
   
