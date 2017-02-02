@@ -1,8 +1,8 @@
 # ATTENTION: Docker 1.12 Users!
 
-This guide uses the Docker-Plugin for jenkins (0.15 or 0.16). Which appear to have some compatibility problems with Docker 1.12.  I will be posting an update to these tutorials (soon tm!) with moving to "Yet Another Docker Plugin" as a result (once I've ironed out testing/kinks/etc). 
+This guide uses the Docker-Plugin for jenkins (0.15 or 0.16). Which appear to have some compatibility problems with Docker 1.12.  When using Docker 1.12, please only use the jenkins2 folder which has evolved from the original blog articles however /is/ compatible with Docker 1.12.
 
-Until then, stick to using Docker 1.10 or 1.11 if you want to follow these guides! Thanks!
+If you want to follow these guides stick to Docker 1.10 or 1.11.
 
 # Jenkins and Docker Tutorial Series
 
