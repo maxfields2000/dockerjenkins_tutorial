@@ -4,7 +4,7 @@ http://engineering.riotgames.com/news/building-jenkins-inside-ephemeral-docker-c
 
 There several key changes however that won't match that blog. Namely:
 
-1. This uses Jenkins 2.7
+1. This uses Jenkins 2.53
 2. This uses the updated "Yet Another Docker Plugin" not the older "Docker Plugin"
   1. In particular how you configure ssl certs to talk to your local docker toolbox has changed
   2. You no longer need to generate an ssh-key pair, the YADP uses JNLP to connect slaves, not SSH
