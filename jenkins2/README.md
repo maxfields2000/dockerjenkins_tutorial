@@ -14,8 +14,7 @@ There several key changes however that won't match that blog. Namely:
 
 # Ephemeral Build Slaves using Jenkins and Docker
 
-This tutorial contains all the files necessary to create your own local Docker-Toolbox version of a fully ephemeral jenkins environment.  Build slaves are designed to
-be docker containers in this configuration. The only thing missing to make it work is your Docker Machine certs (see directions below on how to add these).
+This tutorial contains all the files necessary to create your own local Docker for Mac/Windows or Docker-Toolbox version of a fully ephemeral jenkins environment.  Build slaves are designed to be docker containers in this configuration. 
 
 # Quick Start Jenkins
 
@@ -23,7 +22,7 @@ This will get you upa nd running with some basic jobs and default config. But no
 
 1. Make sure you have all the pre-reqs installed (i.e. Docker-toolbox or Docker for Mac or Docker for Windows) this has been tested up to Docker 1.13
 2. Clone this repository to your local drive
-3. Inside the root folder of your local clone execute the following two commands:
+3. Inside the **jenkins2** folder of your local clone execute the following two commands:
   1. make build
   2. make run (if this is your first time it will ask for your docker host IP)
 4. Point your browser to http://yourdockermachineip (you can get this by running "docker-machine ip default")
