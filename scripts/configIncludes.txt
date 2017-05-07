@@ -1,0 +1,7 @@
+/var/jenkins_home/config.xml
+/var/jenkins_home/scriptApproval.xml
+/var/jenkins_home/hudson.tasks.Mailer.xml
+/var/jenkins_home/org.jenkinsci.plugins.pipeline.modeldefinition.config.GlobalConfig.xml
+/var/jenkins_home/org.jenkinsci.plugins.workflow.libs.GlobalLibraries.xml
+/var/jenkins_home/jenkins.model.JenkinsLocationConfiguration.xml
+/var/jenkins_home/jenkins.security.UpdateSiteWarningsConfiguration.xml

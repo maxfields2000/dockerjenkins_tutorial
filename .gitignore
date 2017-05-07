@@ -1,2 +1,4 @@
 .DS_Store
 *.pem
+jenkinslocation.txt
+jenkinssecrets.tar.gz

@@ -25,6 +25,12 @@ export -f copy_reference_file
 echo "--- Copying files at $(date)" >> $COPY_REFERENCE_FILE_LOG
 find /usr/share/jenkins/ref/ -type f -exec bash -c "copy_reference_file '{}'" \;
 
+echo "--- Setting locations ---"
+MYLOC=`cat /myfiles/jenkinslocation.txt` 
+echo "Jenkins Location: $MYLOC"
+sed -i "s/<jenkinsUrl>.*<\/jenkinsUrl>/<jenkinsUrl>http:\/\/$MYLOC\/<\/jenkinsUrl>/g" /var/jenkins_home/jenkins.model.JenkinsLocationConfiguration.xml
+sed -i "s/<serverUrl>.*<\/serverUrl>/<serverUrl>tcp:\/\/$MYLOC:3375\/<\/serverUrl>/g" /var/jenkins_home/config.xml
+
 # if `docker run` first argument start with `--` the user is passing jenkins launcher arguments
 if [[ $# -lt 1 ]] || [[ "$1" == "--"* ]]; then
    exec java $JAVA_OPTS -Djenkins.install.runSetupWizard=false -jar /usr/share/jenkins/jenkins.war $JENKINS_OPTS "$@"
