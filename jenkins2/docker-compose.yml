@@ -4,6 +4,8 @@ master:
  build: jenkins-master
  volumes_from:
   - data
+ volumes:
+  - ./jenkinslocation.txt:/myfiles/jenkinslocation.txt
  ports:
   - "50000:50000"
 nginx:
@@ -14,4 +16,11 @@ nginx:
   - master:jenkins-master
 slave:
  build: jenkins-slave
+proxy:
+ image: ehazlett/docker-proxy:latest
+ command: -i
+ ports:
+  - "3375:2375"
+ volumes:
+  - /var/run/docker.sock:/var/run/docker.sock 
 
