@@ -21,7 +21,7 @@ Once these are running you have a few more Jenkins Configuration steps:
 
 Jenkins will now start pushing metrics to Graphite. This will take up to 30-45 minutes for all metrics to show up. While waiting, set up a grafana data source and dashboard!
 
-##Data Source
+## Data Source
 
 1. Point your browser to: http://dockerhostip:3000
 2. On the Grafana login page, login as "admin/admin"
@@ -32,7 +32,7 @@ Jenkins will now start pushing metrics to Graphite. This will take up to 30-45 m
 7. Set the Url to "http://dockerhostip:8080"
 8. Click "Save & Test"
 
-##Import dashboard
+## Import dashboard
 
 I have a pre-built dashboard that should capture a lot of useful things about your jenkins server
 
