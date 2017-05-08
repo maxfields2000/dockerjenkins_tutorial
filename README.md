@@ -21,6 +21,10 @@ If you're following along with Jenkins Tutorial series that uses Jenkins 1 I've 
 
 The "Jenkins2" Folder now contains updates and is fully compatible with your Docker for Mac/Windows setups. Enjoy!
 
+# Monitoring Basics
+
+You can find a basic monitoring setup in the `monitoring` folder. Check the [README](https://github.com/maxfields2000/dockerjenkins_tutorial/blob/master/monitoring/README.md)
+
 
 
 

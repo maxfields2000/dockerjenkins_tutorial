@@ -1,0 +1,18 @@
+data:
+ build: data
+grafana:
+ image: grafana/grafana:4.2.0
+ volumes_from:
+  - data
+ ports:
+  - "3000:3000"
+graphite:
+ build: graphite
+ volumes_from:
+  - data
+ ports:
+  - "2003:2003"
+  - "8125:8125/udp"
+  - "8126:8126"
+  - "8080:80"
+
