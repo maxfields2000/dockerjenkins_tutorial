@@ -5,7 +5,7 @@ services:
     ports:
       - "50000:50000"
     volumes:
-      - jenkins-data:/var/log/jenkins
+      - jenkins-log:/var/log/jenkins
       - jenkins-data:/var/jenkins_home
     networks:
       - jenkins-net
@@ -17,6 +17,7 @@ services:
       - jenkins-net
 volumes:
   jenkins-data:
+  jenkins-log:
 networks:
   jenkins-net:
 
