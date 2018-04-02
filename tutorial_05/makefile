@@ -1,5 +1,5 @@
 build:
-	@docker-compose build
+	@docker-compose -p jenkins build
 run:
 	@docker-compose -p jenkins up -d
 stop:
@@ -7,5 +7,5 @@ stop:
 clean-data: 
 	@docker-compose -p jenkins down -v
 clean-images:
-	@docker rmi $(docker images -q --filter="dangling=true")
+	@docker rmi $(shell docker images -q -f "dangling=true")
 
