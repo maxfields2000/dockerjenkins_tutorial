@@ -71,7 +71,7 @@ RUN chown -R ${user}:${user} /var/cache/jenkins
 EXPOSE ${http_port}
 EXPOSE ${agent_port}
 
-# Copy in local config filesfiles
+# Copy in local config files
 COPY init.groovy /usr/share/jenkins/ref/init.groovy.d/tcp-slave-agent-port.groovy
 COPY jenkins-support /usr/local/bin/jenkins-support
 COPY plugins.sh /usr/local/bin/plugins.sh
