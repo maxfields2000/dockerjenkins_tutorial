@@ -21,5 +21,5 @@ clean-data:  clean
 clean-network: clean
 	-docker network rm jenkins-net	
 clean-images:
-	@docker rmi $(docker images -q --filter="dangling=true")
+	@docker rmi `docker images -q -f "dangling=true"`
 

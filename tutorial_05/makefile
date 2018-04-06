@@ -7,5 +7,5 @@ stop:
 clean-data: 
 	@docker-compose -p jenkins down -v
 clean-images:
-	@docker rmi $(shell docker images -q -f "dangling=true")
+	@docker rmi `docker images -q -f "dangling=true"`
 
