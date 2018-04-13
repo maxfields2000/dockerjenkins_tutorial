@@ -18,8 +18,7 @@ services:
   slave:
     build: ./jenkins-slave
   proxy:
-    image: ehazlett/docker-proxy:latest
-    command: -i
+    build: ./docker-proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
