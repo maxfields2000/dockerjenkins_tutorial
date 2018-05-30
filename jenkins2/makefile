@@ -1,15 +1,17 @@
 build:
-	@docker-compose -p jenkins2 build
-	@docker-compose -p jenkins2 pull proxy
+	@docker-compose -p jenkins build
 run:
-	@./setlocation.sh
-	@docker-compose -p jenkins2 up -d nginx data master proxy
+	@docker-compose -p jenkins up -d nginx master proxy
+run-win:
+	@docker-compose -p jenkins up -d nginx master
 stop:
-	@docker-compose -p jenkins2 stop
-clean:	stop
-	@docker-compose -p jenkins2 rm master nginx proxy
-clean-data: clean
-	@docker-compose -p jenkins2 rm -v data
+	@docker-compose -p jenkins down
+clean-data: 
+	@docker-compose -p jenkins down -v
 clean-images:
 	@docker rmi `docker images -q -f "dangling=true"`
+ps:
+	@docker-compose -p jenkins ps
+jenkins-log:
+	@docker-compose -p jenkins exec master tail -f /var/log/jenkins/jenkins.log
 

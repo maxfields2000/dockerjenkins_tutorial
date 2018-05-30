@@ -1,26 +1,34 @@
-data:
- build: jenkins-data
-master:
- build: jenkins-master
- volumes_from:
-  - data
- volumes:
-  - ./jenkinslocation.txt:/myfiles/jenkinslocation.txt
- ports:
-  - "50000:50000"
-nginx:
- build: jenkins-nginx
- ports:
-  - "80:80"
- links:
-  - master:jenkins-master
-slave:
- build: jenkins-slave
-proxy:
- image: ehazlett/docker-proxy:latest
- command: -i
- ports:
-  - "3375:2375"
- volumes:
-  - /var/run/docker.sock:/var/run/docker.sock 
+version: '3'
+services:
+  master:
+    build: ./jenkins-master
+    ports:
+      - "50000:50000"
+    volumes:
+      - jenkins-log:/var/log/jenkins
+      - jenkins-data:/var/jenkins_home
+    networks:
+      - jenkins-net
+  nginx:
+    build: ./jenkins-nginx
+    ports:
+      - "80:80"
+    networks:
+      - jenkins-net
+  slave:
+    build: ./jenkins-slave
+  proxy:
+    build: ./docker-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      jenkins-net:
+        aliases:
+          - proxy1    
+volumes:
+  jenkins-data:
+  jenkins-log:
+networks:
+  jenkins-net:
+
 

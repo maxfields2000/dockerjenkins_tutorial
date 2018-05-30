@@ -1,7 +1,6 @@
 # Scriptler Scripts for API Control of Docker Plugins
 
-These scripts are provided as is.  To use them, make sure your Jenkins environment has the "Scriptler" plugin installed. Add these groovy scripts as 
-Scriptler groovy scripts to your jenkins configuration.
+These scripts are provided as is.  To use them, make sure your Jenkins environment has the "Scriptler" plugin installed. Add these groovy scripts as Scriptler groovy scripts to your jenkins configuration. Please note at this time Scriptler is considered a potential security risk because of its ability to execute code on the master server. Use wisely!
 
 #inputs 
 

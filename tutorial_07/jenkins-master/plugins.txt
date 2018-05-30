@@ -2,4 +2,4 @@ jdk-tool
 jclouds-jenkins
 token-macro
 durable-task
-yet-another-docker-plugin
+docker-plugin
