@@ -1,13 +1,14 @@
 build:
-	@docker-compose build
+	@docker-compose -p jenkins build
 run:
-	@docker-compose up -d
+	@docker-compose -p jenkins up -d
 stop:
-	@docker-compose stop
-clean:	stop
-	@docker-compose rm jenkinsmaster jenkinsnginx
-clean-data: clean
-	@docker-compose rm -v jenkinsdata
+	@docker-compose -p jenkins down
+clean-data: 
+	@docker-compose -p jenkins down -v
 clean-images:
-	@docker rmi $(docker images -q -f "dangling=true")
+	@docker rmi $(shell docker images -q -f "dangling=true")
+jenkins-log:
+	@docker-compose -p jenkins exec master tail -f /var/log/jenkins/jenkins.log
+
 

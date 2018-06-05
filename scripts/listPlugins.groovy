@@ -5,7 +5,7 @@
 // 3. Run this script in the System Groovy Console with the 'Groovy' plugin
 // 4. Replace the plugins.txt file contexts with the resulting output
 
-def plugins = Jenkins.instance.pluginManager.plugins.sort()
+def plugins = new ArrayList(Jenkins.instance.pluginManager.plugins).sort()
 
 plugins.each() { plugin ->
   println plugin.getShortName() + " " + plugin.getVersion()

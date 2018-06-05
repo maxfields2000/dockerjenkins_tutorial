@@ -1,14 +1,23 @@
-jenkinsdata:
- build: jenkins-data
-jenkinsmaster:
- build: jenkins-master
- volumes_from:
-  - jenkinsdata
- ports:
-  - "50000:50000"
-jenkinsnginx:
- build: jenkins-nginx
- ports:
-  - "80:80"
- links:
-  - jenkinsmaster:jenkins-master
+version: '3'
+services:
+  master:
+    build: ./jenkins-master
+    ports:
+      - "50000:50000"
+    volumes:
+      - jenkins-log:/var/log/jenkins
+      - jenkins-data:/var/jenkins_home
+    networks:
+      - jenkins-net
+  nginx:
+    build: ./jenkins-nginx
+    ports:
+      - "80:80"
+    networks:
+      - jenkins-net
+volumes:
+  jenkins-data:
+  jenkins-log:
+networks:
+  jenkins-net:
+

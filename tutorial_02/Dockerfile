@@ -1,5 +1,5 @@
-FROM jenkins:1.609.1
-MAINTAINER Maxfield Stewart
+FROM jenkins/jenkins:2.112
+LABEL maintainer="mstewart@riotgames.com"
 
 # Create Jenkins Log Folder
 USER root
@@ -9,4 +9,4 @@ USER jenkins
 
 # Set default options
 ENV JAVA_OPTS="-Xmx8192m"
-ENV JENKINS_OPTS="--handlerCountStartup=100 --handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log"
+ENV JENKINS_OPTS="--handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log"
