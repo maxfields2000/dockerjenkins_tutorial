@@ -15,20 +15,19 @@ This repository is provided as a set of functional working examples that follows
 
 Ideally users should follow the blog series for specific directions.  That said here's some basic setup instructions you will need before these become viable.
 
-# Step 0 - Pre-Reqs
+# Step 1 - Install Docker For Mac/Win
 
-1. You’ll need Windows 7 (or later) or Mac OSX 10.7 or later.
-2. You’ll need a machine that’s able to run VirtualBox - you may need to enable virtualization in your BIOS on some PC’s.
-3. If you already have Docker Toolbox installed, you can skip step 1 below. This blog was written using Docker Toolbox 1.8 and Virtualbox 5.
-
-   Please note: when installing Docker Toolbox on a system with a pre-existing Virtualbox install you may run into some interesting challenges that are best to get around by uninstalling everything and installing from scratch.
-
-   If installing a new version of Docker Toolbox over a very old version of Boot2docker you may run into issues, it’s best to fully wipe Boot2docker and its iso images before proceeding.
-
-# Step 1 - Install Docker Toolbox
-
-1. Go to: http://docks.docker.com/installation/mac  (or http://docks.docker.com/installation/windows)
-2. Download and install Docker Toolbox for your operating system. Please keep in mind that behind the scenes this is installing VirtualBox.
-3. Follow all setup instructions.
+1. You’ll need Windows 7 (or later) or Mac OSX Sierra or later.
+2. Go to: https://docs.docker.com/docker-for-mac/  (or https://docs.docker.com/docker-for-windows/)
+3. Download and install Docker for your platform
+4. Follow all setup instructions.
 4. Verify your installation is working by opening a docker terminal window (in windows this step is done by clicking the docker quickstart desktop icon) by running the following steps:
-5. Type: docker images (verify it gives you an empty list back with no errors).
+    1. Type: docker images (verify it gives you an empty list back with no errors).
+
+# Step 2 - Choose your Adventure
+
+1. If you want to get started with Jenkins right away, follow the instructions for using the pre-built jenkins setup in this repo here: https://github.com/maxfields2000/dockerjenkins_tutorial/blob/master/jenkins/README.md
+2. If you'd prefer to follow the tutorials in the blog and learn as you go/build it yourself, start here: https://engineering.riotgames.com/news/putting-jenkins-docker-container
+
+
+Good luck, Have Fun!
