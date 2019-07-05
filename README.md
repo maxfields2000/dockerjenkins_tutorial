@@ -13,8 +13,7 @@ This will get you up and running with some basic jobs and default config.
 
 # ATTENTION: Riot Engineer Blog Readers
 
-If you're following along with Jenkins Tutorial series that uses Jenkins 1 I've placed a corresponding Markdown file [here]
-(https://github.com/maxfields2000/dockerjenkins_tutorial/blob/master/BLOG.md)
+If you're following along with Jenkins Tutorial series that uses Jenkins 1 I've placed a corresponding Markdown file [here](https://github.com/maxfields2000/dockerjenkins_tutorial/blob/master/BLOG.md)
 
 
 # ATTENTION: Docker 1.12/1.13 Users!
