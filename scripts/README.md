@@ -9,7 +9,7 @@ If you change settings in the jenkins master config panel or make build jobs you
 1. Go to the /scripts folder
 2. run the getExport.sh script
 
-This script relies on the `configIncludes.txt` file to determine what jenkins configuration to extra. You may have to add additional files depending on the plugin/configs you want to save. That said the script extracts all current job configuration and jenkins settings and places them in the `jenkinsexport.tar.gz` file in the "jenkins-data" directory.  To use it, just wipe your jenkins images (make clean-data) and rebuild (make build)
+This script relies on the `configIncludes.txt` file to determine what jenkins configuration to extract. You may have to add additional files depending on the plugin/configs you want to save. That said the script extracts all current job configuration and jenkins settings and places them in the `jenkinsexport.tar.gz` file in the "jenkins-data" directory.  To use it, just wipe your jenkins images (make clean-data) and rebuild (make build)
 
 # Updating the default plugins
 
